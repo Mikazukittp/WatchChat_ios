@@ -10,22 +10,29 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchChat_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <button alignment="center" backgroundImage="VoiceImage" id="xKw-D9-vhe"/>
+                        <button alignment="center" backgroundImage="VoiceImage" id="xKw-D9-vhe">
+                            <connections>
+                                <action selector="inputTapped" destination="AgC-eL-Hgc" id="Kms-PJ-bjC"/>
+                            </connections>
+                        </button>
                         <group width="80" alignment="left" id="MTW-6i-RyW">
                             <items>
-                                <label alignment="left" text="Label" id="BGc-iL-Xjs"/>
+                                <label alignment="left" text="Label" numberOfLines="0" id="BGc-iL-Xjs"/>
                             </items>
                             <color key="backgroundColor" red="0.25098039215686274" green="0.77254901960784317" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
                         </group>
                         <group width="80" alignment="right" id="fY8-Za-DiS">
                             <items>
-                                <label alignment="right" text="Label" id="R8i-a3-6wE"/>
+                                <label alignment="right" text="Label" numberOfLines="0" id="R8i-a3-6wE"/>
                             </items>
                             <color key="backgroundColor" red="0.0" green="0.67615062881399079" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
                         </group>
                     </items>
+                    <connections>
+                        <outlet property="myText" destination="R8i-a3-6wE" id="EJ2-ab-uWr"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="235" y="347"/>

@@ -15,13 +15,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        let def = NSUserDefaults(suiteName: Const.appGroupId)
+        var userName = def?.objectForKey("userName") as? String
+
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         if let win = window {
             win.opaque = true
-            let vc: SettingViewController = SettingViewController(nibName: "SettingViewController", bundle: nil)
-            win.rootViewController = vc
+            
+            var vc: UIViewController
+            if (userName?.isEmpty == nil) {
+                vc = SettingViewController(nibName: "SettingViewController", bundle: nil)
+            }else {
+                vc = ChangeViewController(nibName: "ChangeViewController", bundle: nil)
+            }
+            
+            var nc = UINavigationController(rootViewController: vc)
+            win.rootViewController = nc
             win.backgroundColor = UIColor.whiteColor()
             win.makeKeyAndVisible()
+            
+            UINavigationBar.appearance().barTintColor = UIColor(red: 0.251, green: 0.773, blue: 0.000, alpha: 1.0)
+            UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+            UINavigationBar.appearance().tintColor = UIColor.whiteColor()
         }
         return true
     }

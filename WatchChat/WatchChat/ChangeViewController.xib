@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChangeViewController" customModule="WatchChat" customModuleProvider="target">
+            <connections>
+                <outlet property="matchUserName" destination="sHy-VK-aok" id="6XU-za-Dfr"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="マッチしたユーザ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M8J-3t-7R3">
+                    <rect key="frame" x="225" y="50" width="150" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="JnT-cH-AgZ"/>
+                        <constraint firstAttribute="height" constant="25" id="YST-Ui-WPj"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sHy-VK-aok">
+                    <rect key="frame" x="30" y="115" width="540" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Tq-4D-7TV">
+                    <rect key="frame" x="225" y="185" width="150" height="30"/>
+                    <color key="backgroundColor" red="0.25098039215686274" green="0.77254901960784317" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="5Vc-rz-L5d"/>
+                        <constraint firstAttribute="width" constant="150" id="sIG-ye-4Zm"/>
+                    </constraints>
+                    <state key="normal" title="チャットを始める">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="2Tq-4D-7TV" secondAttribute="centerX" id="1Ow-fQ-hcg"/>
+                <constraint firstItem="sHy-VK-aok" firstAttribute="top" secondItem="M8J-3t-7R3" secondAttribute="bottom" constant="40" id="7k0-z9-sgF"/>
+                <constraint firstItem="2Tq-4D-7TV" firstAttribute="top" secondItem="sHy-VK-aok" secondAttribute="bottom" constant="50" id="YWb-lO-SBa"/>
+                <constraint firstAttribute="trailing" secondItem="sHy-VK-aok" secondAttribute="trailing" constant="30" id="a1j-Sz-STV"/>
+                <constraint firstAttribute="centerX" secondItem="M8J-3t-7R3" secondAttribute="centerX" id="bTQ-li-c1t"/>
+                <constraint firstItem="M8J-3t-7R3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="50" id="da3-Fc-853"/>
+                <constraint firstItem="sHy-VK-aok" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="fif-zc-qOm"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

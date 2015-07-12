@@ -21,6 +21,8 @@
 		8314A6F61B5246EA00C527B2 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8314A6F41B5246EA00C527B2 /* SettingViewController.xib */; };
 		8314A6FA1B5247CD00C527B2 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8314A6F91B5247CD00C527B2 /* Interface.storyboard */; };
 		8314A6FE1B52485600C527B2 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8314A6FD1B52485600C527B2 /* Const.swift */; };
+		83856E221B52A8AE00D17716 /* ChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83856E201B52A8AE00D17716 /* ChangeViewController.swift */; };
+		83856E231B52A8AE00D17716 /* ChangeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83856E211B52A8AE00D17716 /* ChangeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +87,8 @@
 		8314A6F81B52477A00C527B2 /* WatchChat WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "WatchChat WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		8314A6F91B5247CD00C527B2 /* Interface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Interface.storyboard; sourceTree = "<group>"; };
 		8314A6FD1B52485600C527B2 /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		83856E201B52A8AE00D17716 /* ChangeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeViewController.swift; sourceTree = "<group>"; };
+		83856E211B52A8AE00D17716 /* ChangeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChangeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +222,8 @@
 			children = (
 				8314A6F31B5246EA00C527B2 /* SettingViewController.swift */,
 				8314A6F41B5246EA00C527B2 /* SettingViewController.xib */,
+				83856E201B52A8AE00D17716 /* ChangeViewController.swift */,
+				83856E211B52A8AE00D17716 /* ChangeViewController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -359,6 +365,7 @@
 					};
 					8314A6D81B52468600C527B2 = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = YWN725QK7F;
 					};
 				};
 			};
@@ -388,6 +395,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83856E231B52A8AE00D17716 /* ChangeViewController.xib in Resources */,
 				8314A6AE1B52464000C527B2 /* Images.xcassets in Resources */,
 				8314A6F61B5246EA00C527B2 /* SettingViewController.xib in Resources */,
 			);
@@ -427,6 +435,7 @@
 			files = (
 				8314A6A71B52464000C527B2 /* AppDelegate.swift in Sources */,
 				8314A6F51B5246EA00C527B2 /* SettingViewController.swift in Sources */,
+				83856E221B52A8AE00D17716 /* ChangeViewController.swift in Sources */,
 				8314A6FE1B52485600C527B2 /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -487,6 +496,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -557,6 +567,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = WatchChat/WatchChat.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = WatchChat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -570,6 +581,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = WatchChat/WatchChat.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				INFOPLIST_FILE = WatchChat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -615,6 +627,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -633,6 +646,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				IBSC_MODULE = WatchChat_WatchKit_Extension;
 				INFOPLIST_FILE = "WatchChat WatchKit App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
@@ -654,6 +668,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "WatchChat WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE = "";
@@ -665,9 +680,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "WatchChat WatchKit Extension/WatchChat WatchKit Extension.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "WatchChat WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE = "";
@@ -694,6 +710,7 @@
 				8314A6C21B52464000C527B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8314A6C31B52464000C527B2 /* Build configuration list for PBXNativeTarget "WatchChatTests" */ = {
 			isa = XCConfigurationList;
@@ -702,6 +719,7 @@
 				8314A6C51B52464000C527B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8314A6E81B52468600C527B2 /* Build configuration list for PBXNativeTarget "WatchChat WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -710,6 +728,7 @@
 				8314A6EA1B52468600C527B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8314A6EB1B52468600C527B2 /* Build configuration list for PBXNativeTarget "WatchChat WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -718,6 +737,7 @@
 				8314A6ED1B52468600C527B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

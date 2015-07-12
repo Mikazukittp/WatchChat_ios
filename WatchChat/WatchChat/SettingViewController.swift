@@ -14,6 +14,8 @@ class SettingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.title = "WatchChat"
+        
         self.setButton()
     }
 
@@ -22,7 +24,10 @@ class SettingViewController: UIViewController {
         let def = NSUserDefaults(suiteName: Const.appGroupId)
         def?.setObject(self.userName.text, forKey: "userName")
         
-        
+        var pc = ChangeViewController(nibName: "ChangeViewController", bundle: nil)
+
+        self.navigationController?.pushViewController(pc, animated: true)
+        self.navigationController?.setNavigationBarHidden(false, animated: true)        
     }
     
     private func setButton () {
