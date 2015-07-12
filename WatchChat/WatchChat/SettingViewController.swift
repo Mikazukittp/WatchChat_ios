@@ -21,6 +21,12 @@ class SettingViewController: UIViewController {
 
     @IBAction func settingButtonTapped(sender: AnyObject) {
         
+        if  userName.text.isEmpty {
+            userName.attributedPlaceholder = NSAttributedString(string:"名前を入力してください",
+                attributes:[NSForegroundColorAttributeName: UIColor.redColor()])
+            return
+        }
+        
         let def = NSUserDefaults(suiteName: Const.appGroupId)
         def?.setObject(self.userName.text, forKey: "userName")
         

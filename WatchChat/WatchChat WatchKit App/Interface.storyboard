@@ -24,7 +24,7 @@
                         </group>
                         <group width="80" alignment="right" id="fY8-Za-DiS">
                             <items>
-                                <label alignment="right" text="Label" numberOfLines="0" id="R8i-a3-6wE"/>
+                                <label alignment="left" text="Label" numberOfLines="0" id="R8i-a3-6wE"/>
                             </items>
                             <color key="backgroundColor" red="0.0" green="0.67615062881399079" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
@@ -42,8 +42,19 @@
             <objects>
                 <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController" customModule="WatchChat_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <group alignment="left" id="t8f-Gd-c4y"/>
-                        <group alignment="left" id="uCw-4Q-Ouw"/>
+                        <group alignment="left" id="t8f-Gd-c4y">
+                            <items>
+                                <imageView alignment="left" image="CircleIcon" id="ufc-C3-Yqw"/>
+                            </items>
+                        </group>
+                        <group alignment="left" layout="vertical" id="uCw-4Q-Ouw">
+                            <items>
+                                <label height="19.5" alignment="left" text="最新のメッセージ" id="gCq-uZ-62j"/>
+                                <label alignment="left" text="明日晴れるかな" id="g8e-Br-ZJb">
+                                    <color key="textColor" red="0.25098039215686274" green="0.77254901960784317" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </label>
+                            </items>
+                        </group>
                     </items>
                     <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
                 </glanceController>
