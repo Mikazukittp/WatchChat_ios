@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingViewController" customModule="WatchChat" customModuleProvider="target">
+            <connections>
+                <outlet property="userName" destination="rZj-Yu-HKh" id="8xw-Fr-mqp"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="userName" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rZj-Yu-HKh">
+                    <rect key="frame" x="0.0" y="100" width="600" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="xnp-CP-bVe"/>
+                    </constraints>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HWP-YE-EOS">
+                    <rect key="frame" x="250" y="200" width="100" height="30"/>
+                    <color key="backgroundColor" red="0.25098039215686274" green="0.77254901960784317" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="9al-io-S73"/>
+                    </constraints>
+                    <state key="normal" title="設定">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="settingButtonTapped:" destination="-1" eventType="touchUpInside" id="WjX-ps-gPI"/>
+                    </connections>
+                </button>
+                <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="uRc-SD-K9Y">
+                    <rect key="frame" x="132" y="322" width="337" height="128"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="128" id="aWn-3y-hOk"/>
+                        <constraint firstAttribute="width" constant="337" id="sW7-wR-Tab"/>
+                    </constraints>
+                    <string key="text">名前を設定して
+AppleWatchで
+Chatをはじめよう！</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="rZj-Yu-HKh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="EdN-Uq-dbI"/>
+                <constraint firstItem="rZj-Yu-HKh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="IUV-lj-Vdp"/>
+                <constraint firstItem="HWP-YE-EOS" firstAttribute="top" secondItem="rZj-Yu-HKh" secondAttribute="bottom" constant="70" id="ML8-ga-LcS"/>
+                <constraint firstAttribute="trailing" secondItem="rZj-Yu-HKh" secondAttribute="trailing" id="ORN-lC-mrJ"/>
+                <constraint firstAttribute="centerX" secondItem="uRc-SD-K9Y" secondAttribute="centerX" id="VzE-cq-CVj"/>
+                <constraint firstAttribute="centerX" secondItem="HWP-YE-EOS" secondAttribute="centerX" id="YYU-x3-Z8w"/>
+                <constraint firstItem="uRc-SD-K9Y" firstAttribute="top" secondItem="HWP-YE-EOS" secondAttribute="bottom" constant="92" id="d13-8r-Cpd"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

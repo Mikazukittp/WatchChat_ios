@@ -1,0 +1,725 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8314A6A71B52464000C527B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8314A6A61B52464000C527B2 /* AppDelegate.swift */; };
+		8314A6AE1B52464000C527B2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8314A6AD1B52464000C527B2 /* Images.xcassets */; };
+		8314A6BD1B52464000C527B2 /* WatchChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8314A6BC1B52464000C527B2 /* WatchChatTests.swift */; };
+		8314A6D01B52468600C527B2 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8314A6CF1B52468600C527B2 /* InterfaceController.swift */; };
+		8314A6D21B52468600C527B2 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8314A6D11B52468600C527B2 /* NotificationController.swift */; };
+		8314A6D41B52468600C527B2 /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8314A6D31B52468600C527B2 /* GlanceController.swift */; };
+		8314A6D61B52468600C527B2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8314A6D51B52468600C527B2 /* Images.xcassets */; };
+		8314A6DA1B52468600C527B2 /* WatchChat WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 8314A6D91B52468600C527B2 /* WatchChat WatchKit App.app */; };
+		8314A6E41B52468600C527B2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8314A6E31B52468600C527B2 /* Images.xcassets */; };
+		8314A6E71B52468600C527B2 /* WatchChat WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8314A6CA1B52468600C527B2 /* WatchChat WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8314A6F51B5246EA00C527B2 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8314A6F31B5246EA00C527B2 /* SettingViewController.swift */; };
+		8314A6F61B5246EA00C527B2 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8314A6F41B5246EA00C527B2 /* SettingViewController.xib */; };
+		8314A6FA1B5247CD00C527B2 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8314A6F91B5247CD00C527B2 /* Interface.storyboard */; };
+		8314A6FE1B52485600C527B2 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8314A6FD1B52485600C527B2 /* Const.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8314A6B71B52464000C527B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8314A6991B52464000C527B2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8314A6A01B52464000C527B2;
+			remoteInfo = WatchChat;
+		};
+		8314A6DB1B52468600C527B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8314A6991B52464000C527B2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8314A6D81B52468600C527B2;
+			remoteInfo = "WatchChat WatchKit App";
+		};
+		8314A6E51B52468600C527B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8314A6991B52464000C527B2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8314A6C91B52468600C527B2;
+			remoteInfo = "WatchChat WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8314A6EE1B52468600C527B2 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8314A6E71B52468600C527B2 /* WatchChat WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		8314A6A11B52464000C527B2 /* WatchChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8314A6A51B52464000C527B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8314A6A61B52464000C527B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8314A6AD1B52464000C527B2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8314A6B61B52464000C527B2 /* WatchChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WatchChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8314A6BB1B52464000C527B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8314A6BC1B52464000C527B2 /* WatchChatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchChatTests.swift; sourceTree = "<group>"; };
+		8314A6CA1B52468600C527B2 /* WatchChat WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WatchChat WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8314A6CD1B52468600C527B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8314A6CE1B52468600C527B2 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		8314A6CF1B52468600C527B2 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		8314A6D11B52468600C527B2 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		8314A6D31B52468600C527B2 /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
+		8314A6D51B52468600C527B2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8314A6D91B52468600C527B2 /* WatchChat WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WatchChat WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8314A6DF1B52468600C527B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8314A6E31B52468600C527B2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8314A6F31B5246EA00C527B2 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		8314A6F41B5246EA00C527B2 /* SettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
+		8314A6F71B52476F00C527B2 /* WatchChat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = WatchChat.entitlements; sourceTree = "<group>"; };
+		8314A6F81B52477A00C527B2 /* WatchChat WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "WatchChat WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		8314A6F91B5247CD00C527B2 /* Interface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Interface.storyboard; sourceTree = "<group>"; };
+		8314A6FD1B52485600C527B2 /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8314A69E1B52464000C527B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8314A6B31B52464000C527B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8314A6C71B52468600C527B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8314A6981B52464000C527B2 = {
+			isa = PBXGroup;
+			children = (
+				8314A6A31B52464000C527B2 /* WatchChat */,
+				8314A6B91B52464000C527B2 /* WatchChatTests */,
+				8314A6CB1B52468600C527B2 /* WatchChat WatchKit Extension */,
+				8314A6DD1B52468600C527B2 /* WatchChat WatchKit App */,
+				8314A6A21B52464000C527B2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8314A6A21B52464000C527B2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8314A6A11B52464000C527B2 /* WatchChat.app */,
+				8314A6B61B52464000C527B2 /* WatchChatTests.xctest */,
+				8314A6CA1B52468600C527B2 /* WatchChat WatchKit Extension.appex */,
+				8314A6D91B52468600C527B2 /* WatchChat WatchKit App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8314A6A31B52464000C527B2 /* WatchChat */ = {
+			isa = PBXGroup;
+			children = (
+				8314A6FC1B52484400C527B2 /* Util */,
+				8314A6F71B52476F00C527B2 /* WatchChat.entitlements */,
+				8314A6F01B5246AA00C527B2 /* Model */,
+				8314A6EF1B52469A00C527B2 /* Controller */,
+				8314A6A61B52464000C527B2 /* AppDelegate.swift */,
+				8314A6AD1B52464000C527B2 /* Images.xcassets */,
+				8314A6A41B52464000C527B2 /* Supporting Files */,
+			);
+			path = WatchChat;
+			sourceTree = "<group>";
+		};
+		8314A6A41B52464000C527B2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8314A6A51B52464000C527B2 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8314A6B91B52464000C527B2 /* WatchChatTests */ = {
+			isa = PBXGroup;
+			children = (
+				8314A6BC1B52464000C527B2 /* WatchChatTests.swift */,
+				8314A6BA1B52464000C527B2 /* Supporting Files */,
+			);
+			path = WatchChatTests;
+			sourceTree = "<group>";
+		};
+		8314A6BA1B52464000C527B2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8314A6BB1B52464000C527B2 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8314A6CB1B52468600C527B2 /* WatchChat WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8314A6F81B52477A00C527B2 /* WatchChat WatchKit Extension.entitlements */,
+				8314A6CF1B52468600C527B2 /* InterfaceController.swift */,
+				8314A6D11B52468600C527B2 /* NotificationController.swift */,
+				8314A6D31B52468600C527B2 /* GlanceController.swift */,
+				8314A6D51B52468600C527B2 /* Images.xcassets */,
+				8314A6CC1B52468600C527B2 /* Supporting Files */,
+			);
+			path = "WatchChat WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		8314A6CC1B52468600C527B2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8314A6CD1B52468600C527B2 /* Info.plist */,
+				8314A6CE1B52468600C527B2 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8314A6DD1B52468600C527B2 /* WatchChat WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				8314A6F91B5247CD00C527B2 /* Interface.storyboard */,
+				8314A6E31B52468600C527B2 /* Images.xcassets */,
+				8314A6DE1B52468600C527B2 /* Supporting Files */,
+			);
+			path = "WatchChat WatchKit App";
+			sourceTree = "<group>";
+		};
+		8314A6DE1B52468600C527B2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8314A6DF1B52468600C527B2 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8314A6EF1B52469A00C527B2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8314A6F31B5246EA00C527B2 /* SettingViewController.swift */,
+				8314A6F41B5246EA00C527B2 /* SettingViewController.xib */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		8314A6F01B5246AA00C527B2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8314A6F21B5246C200C527B2 /* Fetcher */,
+				8314A6F11B5246B500C527B2 /* Entity */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		8314A6F11B5246B500C527B2 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Entity;
+			sourceTree = "<group>";
+		};
+		8314A6F21B5246C200C527B2 /* Fetcher */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Fetcher;
+			sourceTree = "<group>";
+		};
+		8314A6FC1B52484400C527B2 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				8314A6FD1B52485600C527B2 /* Const.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8314A6A01B52464000C527B2 /* WatchChat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8314A6C01B52464000C527B2 /* Build configuration list for PBXNativeTarget "WatchChat" */;
+			buildPhases = (
+				8314A69D1B52464000C527B2 /* Sources */,
+				8314A69E1B52464000C527B2 /* Frameworks */,
+				8314A69F1B52464000C527B2 /* Resources */,
+				8314A6EE1B52468600C527B2 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8314A6E61B52468600C527B2 /* PBXTargetDependency */,
+			);
+			name = WatchChat;
+			productName = WatchChat;
+			productReference = 8314A6A11B52464000C527B2 /* WatchChat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8314A6B51B52464000C527B2 /* WatchChatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8314A6C31B52464000C527B2 /* Build configuration list for PBXNativeTarget "WatchChatTests" */;
+			buildPhases = (
+				8314A6B21B52464000C527B2 /* Sources */,
+				8314A6B31B52464000C527B2 /* Frameworks */,
+				8314A6B41B52464000C527B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8314A6B81B52464000C527B2 /* PBXTargetDependency */,
+			);
+			name = WatchChatTests;
+			productName = WatchChatTests;
+			productReference = 8314A6B61B52464000C527B2 /* WatchChatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8314A6C91B52468600C527B2 /* WatchChat WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8314A6EB1B52468600C527B2 /* Build configuration list for PBXNativeTarget "WatchChat WatchKit Extension" */;
+			buildPhases = (
+				8314A6C61B52468600C527B2 /* Sources */,
+				8314A6C71B52468600C527B2 /* Frameworks */,
+				8314A6C81B52468600C527B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8314A6DC1B52468600C527B2 /* PBXTargetDependency */,
+			);
+			name = "WatchChat WatchKit Extension";
+			productName = "WatchChat WatchKit Extension";
+			productReference = 8314A6CA1B52468600C527B2 /* WatchChat WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		8314A6D81B52468600C527B2 /* WatchChat WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8314A6E81B52468600C527B2 /* Build configuration list for PBXNativeTarget "WatchChat WatchKit App" */;
+			buildPhases = (
+				8314A6D71B52468600C527B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WatchChat WatchKit App";
+			productName = "WatchChat WatchKit App";
+			productReference = 8314A6D91B52468600C527B2 /* WatchChat WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8314A6991B52464000C527B2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "石部達也";
+				TargetAttributes = {
+					8314A6A01B52464000C527B2 = {
+						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = YWN725QK7F;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					8314A6B51B52464000C527B2 = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = 8314A6A01B52464000C527B2;
+					};
+					8314A6C91B52468600C527B2 = {
+						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = YWN725QK7F;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					8314A6D81B52468600C527B2 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+				};
+			};
+			buildConfigurationList = 8314A69C1B52464000C527B2 /* Build configuration list for PBXProject "WatchChat" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8314A6981B52464000C527B2;
+			productRefGroup = 8314A6A21B52464000C527B2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8314A6A01B52464000C527B2 /* WatchChat */,
+				8314A6B51B52464000C527B2 /* WatchChatTests */,
+				8314A6C91B52468600C527B2 /* WatchChat WatchKit Extension */,
+				8314A6D81B52468600C527B2 /* WatchChat WatchKit App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8314A69F1B52464000C527B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8314A6AE1B52464000C527B2 /* Images.xcassets in Resources */,
+				8314A6F61B5246EA00C527B2 /* SettingViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8314A6B41B52464000C527B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8314A6C81B52468600C527B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8314A6DA1B52468600C527B2 /* WatchChat WatchKit App.app in Resources */,
+				8314A6D61B52468600C527B2 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8314A6D71B52468600C527B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8314A6FA1B5247CD00C527B2 /* Interface.storyboard in Resources */,
+				8314A6E41B52468600C527B2 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8314A69D1B52464000C527B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8314A6A71B52464000C527B2 /* AppDelegate.swift in Sources */,
+				8314A6F51B5246EA00C527B2 /* SettingViewController.swift in Sources */,
+				8314A6FE1B52485600C527B2 /* Const.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8314A6B21B52464000C527B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8314A6BD1B52464000C527B2 /* WatchChatTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8314A6C61B52468600C527B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8314A6D21B52468600C527B2 /* NotificationController.swift in Sources */,
+				8314A6D01B52468600C527B2 /* InterfaceController.swift in Sources */,
+				8314A6D41B52468600C527B2 /* GlanceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8314A6B81B52464000C527B2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8314A6A01B52464000C527B2 /* WatchChat */;
+			targetProxy = 8314A6B71B52464000C527B2 /* PBXContainerItemProxy */;
+		};
+		8314A6DC1B52468600C527B2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8314A6D81B52468600C527B2 /* WatchChat WatchKit App */;
+			targetProxy = 8314A6DB1B52468600C527B2 /* PBXContainerItemProxy */;
+		};
+		8314A6E61B52468600C527B2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8314A6C91B52468600C527B2 /* WatchChat WatchKit Extension */;
+			targetProxy = 8314A6E51B52468600C527B2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		8314A6BE1B52464000C527B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8314A6BF1B52464000C527B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8314A6C11B52464000C527B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = WatchChat/WatchChat.entitlements;
+				INFOPLIST_FILE = WatchChat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8314A6C21B52464000C527B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = WatchChat/WatchChat.entitlements;
+				INFOPLIST_FILE = WatchChat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		8314A6C41B52464000C527B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = WatchChatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WatchChat.app/WatchChat";
+			};
+			name = Debug;
+		};
+		8314A6C51B52464000C527B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = WatchChatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WatchChat.app/WatchChat";
+			};
+			name = Release;
+		};
+		8314A6E91B52468600C527B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = WatchChat_WatchKit_Extension;
+				INFOPLIST_FILE = "WatchChat WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		8314A6EA1B52468600C527B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				IBSC_MODULE = WatchChat_WatchKit_Extension;
+				INFOPLIST_FILE = "WatchChat WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
+		8314A6EC1B52468600C527B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "WatchChat WatchKit Extension/WatchChat WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "WatchChat WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		8314A6ED1B52468600C527B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "WatchChat WatchKit Extension/WatchChat WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "WatchChat WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8314A69C1B52464000C527B2 /* Build configuration list for PBXProject "WatchChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8314A6BE1B52464000C527B2 /* Debug */,
+				8314A6BF1B52464000C527B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8314A6C01B52464000C527B2 /* Build configuration list for PBXNativeTarget "WatchChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8314A6C11B52464000C527B2 /* Debug */,
+				8314A6C21B52464000C527B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8314A6C31B52464000C527B2 /* Build configuration list for PBXNativeTarget "WatchChatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8314A6C41B52464000C527B2 /* Debug */,
+				8314A6C51B52464000C527B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8314A6E81B52468600C527B2 /* Build configuration list for PBXNativeTarget "WatchChat WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8314A6E91B52468600C527B2 /* Debug */,
+				8314A6EA1B52468600C527B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8314A6EB1B52468600C527B2 /* Build configuration list for PBXNativeTarget "WatchChat WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8314A6EC1B52468600C527B2 /* Debug */,
+				8314A6ED1B52468600C527B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8314A6991B52464000C527B2 /* Project object */;
+}
