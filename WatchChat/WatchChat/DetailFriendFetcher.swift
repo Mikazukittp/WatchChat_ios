@@ -43,14 +43,13 @@ class DetailFriendFetcher: BaseFetcher {
     
     func message (completion:(array :NSArray)->Void) {
         let def = NSUserDefaults(suiteName: Const.appGroupId)
-        var myid = 43
-//        def?.objectForKey("myId") as? Int
+        var myid = def?.objectForKey("myId") as? Int
         
-//        if myid == nil {
-//            return
-//        }
+        if myid == nil {
+            return
+        }
 
-        var request = NSMutableURLRequest(URL: NSURL(string: Const.urlDomain + "/messages" + "?sender_id=" + String(myid) )!,
+        var request = NSMutableURLRequest(URL: NSURL(string: Const.urlDomain + "/messages" + "?sender_id=" + String(myid!) )!,
             cachePolicy: .UseProtocolCachePolicy,
             timeoutInterval: 10.0)
         request.HTTPMethod = "GET"

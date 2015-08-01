@@ -13,13 +13,8 @@ class RegistFetcher: BaseFetcher {
     func regist (name :String, completion:(userId :Int)->Void) {
         
         let def = NSUserDefaults(suiteName: Const.appGroupId)
-        var deviceToken = "adjljda"
-        //def?.objectForKey("deviceToken") as? String
-        
-//        if (deviceToken.isEmpty == nil) {
-//            return
-//        }
-        
+        var deviceToken = def?.objectForKey("deviceToken") as? String!
+                
         var request = NSMutableURLRequest(URL: NSURL(string: Const.urlDomain + "/users")!,
             cachePolicy: .UseProtocolCachePolicy,
             timeoutInterval: 10.0)

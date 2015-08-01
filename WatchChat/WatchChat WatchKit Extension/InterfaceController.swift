@@ -46,31 +46,19 @@ class InterfaceController: WKInterfaceController {
 
     @IBAction func inputTapped() {
         
-//        self.presentTextInputControllerWithSuggestions(nil, allowedInputMode: WKTextInputMode.Plain, completion:  {(result: [AnyObject]!) -> Void in println(result)
-//            
-//            if result.count > 0 {
-//                
-//                WKInterfaceController.openParentApplication(["message": "\(result[0])"],
-//                    reply: {replyInfo, error in
-//                        println(replyInfo["fromApp"])
-//                })
-//                
-//                var item:Chat = Chat()
-//                item.name = self.myName
-//                item.message = result[0] as? String
-//                item.userId = self.myId
-//                
-//                WatchUtil().addItem(item ,items :self.items)
-//                self.addItems(item)
-//            }
-//        })
-        var item:Chat = Chat()
-        item.name = self.myName
-        item.message = "test"
-        item.userId = self.opponentId
-        
-        WatchUtil().addItem(item ,items :self.items)
-        self.addItems(item)
+        self.presentTextInputControllerWithSuggestions(nil, allowedInputMode: WKTextInputMode.Plain, completion:  {(result: [AnyObject]!) -> Void in println(result)
+
+            if result.count > 0 {
+
+                var item:Chat = Chat()
+                item.name = self.myName
+                item.message = result[0] as? String
+                item.userId = self.opponentId
+
+                WatchUtil().addItem(item ,items :self.items)
+                self.addItems(item)
+            }
+        })
     }
     
     private func loadData () {
