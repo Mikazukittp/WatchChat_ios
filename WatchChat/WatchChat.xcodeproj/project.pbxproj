@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		80848B8D458D7002B0A9CD8B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 98A97A53A8E82382BA08EE2D /* libPods.a */; };
+		830A4C3E1B6C8D8700A9EDE4 /* BaseFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830A4C3D1B6C8D8700A9EDE4 /* BaseFetcher.swift */; };
+		830A4C3F1B6C925700A9EDE4 /* BaseFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830A4C3D1B6C8D8700A9EDE4 /* BaseFetcher.swift */; };
+		830A4C461B6CA75600A9EDE4 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830A4C451B6CA75600A9EDE4 /* ChatViewController.swift */; };
+		830A4C471B6CB19300A9EDE4 /* SendMessageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8342F1F41B53D8D0000B8748 /* SendMessageFetcher.swift */; };
 		8314A6A71B52464000C527B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8314A6A61B52464000C527B2 /* AppDelegate.swift */; };
 		8314A6AE1B52464000C527B2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8314A6AD1B52464000C527B2 /* Images.xcassets */; };
 		8314A6BD1B52464000C527B2 /* WatchChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8314A6BC1B52464000C527B2 /* WatchChatTests.swift */; };
@@ -21,8 +26,19 @@
 		8314A6F61B5246EA00C527B2 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8314A6F41B5246EA00C527B2 /* SettingViewController.xib */; };
 		8314A6FA1B5247CD00C527B2 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8314A6F91B5247CD00C527B2 /* Interface.storyboard */; };
 		8314A6FE1B52485600C527B2 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8314A6FD1B52485600C527B2 /* Const.swift */; };
+		833C82FD1B569E950083E069 /* ConnectionFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833C82FC1B569E950083E069 /* ConnectionFetcher.swift */; };
+		8342F1F51B53D8D0000B8748 /* SendMessageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8342F1F41B53D8D0000B8748 /* SendMessageFetcher.swift */; };
+		8342F1F71B53E581000B8748 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8342F1F61B53E581000B8748 /* Chat.swift */; };
+		8342F1F81B540011000B8748 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8342F1F61B53E581000B8748 /* Chat.swift */; };
+		8342F1F91B54001E000B8748 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8314A6FD1B52485600C527B2 /* Const.swift */; };
+		8342F1FB1B54012E000B8748 /* RowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8342F1FA1B54012E000B8748 /* RowController.swift */; };
+		8342F1FE1B5411FD000B8748 /* WatchUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8342F1FD1B5411FD000B8748 /* WatchUtil.swift */; };
 		83856E221B52A8AE00D17716 /* ChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83856E201B52A8AE00D17716 /* ChangeViewController.swift */; };
 		83856E231B52A8AE00D17716 /* ChangeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83856E211B52A8AE00D17716 /* ChangeViewController.xib */; };
+		83BDD4051B58151C00422B0D /* DetailFriendFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ED83401B57FE9A00111CB7 /* DetailFriendFetcher.swift */; };
+		83D3B58D1B5561EA00F16CE7 /* RegistFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D3B58C1B5561EA00F16CE7 /* RegistFetcher.swift */; };
+		83ED833F1B57E4A900111CB7 /* DisConnectFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ED833E1B57E4A900111CB7 /* DisConnectFetcher.swift */; };
+		83ED83411B57FE9A00111CB7 /* DetailFriendFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ED83401B57FE9A00111CB7 /* DetailFriendFetcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +80,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3B35D85CA5F7B3700FB685C0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		830A4C3D1B6C8D8700A9EDE4 /* BaseFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseFetcher.swift; sourceTree = "<group>"; };
+		830A4C441B6CA11C00A9EDE4 /* WatchChat-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WatchChat-Bridging-Header.h"; sourceTree = "<group>"; };
+		830A4C451B6CA75600A9EDE4 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		8314A6A11B52464000C527B2 /* WatchChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8314A6A51B52464000C527B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8314A6A61B52464000C527B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,8 +107,18 @@
 		8314A6F81B52477A00C527B2 /* WatchChat WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "WatchChat WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		8314A6F91B5247CD00C527B2 /* Interface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Interface.storyboard; sourceTree = "<group>"; };
 		8314A6FD1B52485600C527B2 /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		833C82FC1B569E950083E069 /* ConnectionFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionFetcher.swift; sourceTree = "<group>"; };
+		8342F1F41B53D8D0000B8748 /* SendMessageFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendMessageFetcher.swift; sourceTree = "<group>"; };
+		8342F1F61B53E581000B8748 /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		8342F1FA1B54012E000B8748 /* RowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowController.swift; sourceTree = "<group>"; };
+		8342F1FD1B5411FD000B8748 /* WatchUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchUtil.swift; sourceTree = "<group>"; };
 		83856E201B52A8AE00D17716 /* ChangeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeViewController.swift; sourceTree = "<group>"; };
 		83856E211B52A8AE00D17716 /* ChangeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChangeViewController.xib; sourceTree = "<group>"; };
+		83D3B58C1B5561EA00F16CE7 /* RegistFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistFetcher.swift; sourceTree = "<group>"; };
+		83ED833E1B57E4A900111CB7 /* DisConnectFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisConnectFetcher.swift; sourceTree = "<group>"; };
+		83ED83401B57FE9A00111CB7 /* DetailFriendFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailFriendFetcher.swift; sourceTree = "<group>"; };
+		98A97A53A8E82382BA08EE2D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BACA05FA6E47B6C5811FAD63 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80848B8D458D7002B0A9CD8B /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +147,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		040990674AE2F0D741B5FC9E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				98A97A53A8E82382BA08EE2D /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8314A6981B52464000C527B2 = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +163,8 @@
 				8314A6CB1B52468600C527B2 /* WatchChat WatchKit Extension */,
 				8314A6DD1B52468600C527B2 /* WatchChat WatchKit App */,
 				8314A6A21B52464000C527B2 /* Products */,
+				DDE10A8DA7DF0E7C1407EC50 /* Pods */,
+				040990674AE2F0D741B5FC9E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -146,6 +187,7 @@
 				8314A6F01B5246AA00C527B2 /* Model */,
 				8314A6EF1B52469A00C527B2 /* Controller */,
 				8314A6A61B52464000C527B2 /* AppDelegate.swift */,
+				830A4C441B6CA11C00A9EDE4 /* WatchChat-Bridging-Header.h */,
 				8314A6AD1B52464000C527B2 /* Images.xcassets */,
 				8314A6A41B52464000C527B2 /* Supporting Files */,
 			);
@@ -181,9 +223,11 @@
 			isa = PBXGroup;
 			children = (
 				8314A6F81B52477A00C527B2 /* WatchChat WatchKit Extension.entitlements */,
+				8342F1FC1B5411EC000B8748 /* Util */,
 				8314A6CF1B52468600C527B2 /* InterfaceController.swift */,
 				8314A6D11B52468600C527B2 /* NotificationController.swift */,
 				8314A6D31B52468600C527B2 /* GlanceController.swift */,
+				8342F1FA1B54012E000B8748 /* RowController.swift */,
 				8314A6D51B52468600C527B2 /* Images.xcassets */,
 				8314A6CC1B52468600C527B2 /* Supporting Files */,
 			);
@@ -224,6 +268,7 @@
 				8314A6F41B5246EA00C527B2 /* SettingViewController.xib */,
 				83856E201B52A8AE00D17716 /* ChangeViewController.swift */,
 				83856E211B52A8AE00D17716 /* ChangeViewController.xib */,
+				830A4C451B6CA75600A9EDE4 /* ChatViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -240,6 +285,7 @@
 		8314A6F11B5246B500C527B2 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				8342F1F61B53E581000B8748 /* Chat.swift */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -247,6 +293,12 @@
 		8314A6F21B5246C200C527B2 /* Fetcher */ = {
 			isa = PBXGroup;
 			children = (
+				8342F1F41B53D8D0000B8748 /* SendMessageFetcher.swift */,
+				830A4C3D1B6C8D8700A9EDE4 /* BaseFetcher.swift */,
+				83D3B58C1B5561EA00F16CE7 /* RegistFetcher.swift */,
+				833C82FC1B569E950083E069 /* ConnectionFetcher.swift */,
+				83ED833E1B57E4A900111CB7 /* DisConnectFetcher.swift */,
+				83ED83401B57FE9A00111CB7 /* DetailFriendFetcher.swift */,
 			);
 			name = Fetcher;
 			sourceTree = "<group>";
@@ -259,6 +311,23 @@
 			name = Util;
 			sourceTree = "<group>";
 		};
+		8342F1FC1B5411EC000B8748 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				8342F1FD1B5411FD000B8748 /* WatchUtil.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		DDE10A8DA7DF0E7C1407EC50 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3B35D85CA5F7B3700FB685C0 /* Pods.debug.xcconfig */,
+				BACA05FA6E47B6C5811FAD63 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -266,10 +335,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8314A6C01B52464000C527B2 /* Build configuration list for PBXNativeTarget "WatchChat" */;
 			buildPhases = (
+				1B322F2F5B809413C5A36A68 /* Check Pods Manifest.lock */,
 				8314A69D1B52464000C527B2 /* Sources */,
 				8314A69E1B52464000C527B2 /* Frameworks */,
 				8314A69F1B52464000C527B2 /* Resources */,
 				8314A6EE1B52468600C527B2 /* Embed App Extensions */,
+				9E6B7FAAE96EAA962196EDF0 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -346,7 +417,7 @@
 						DevelopmentTeam = YWN725QK7F;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -359,7 +430,7 @@
 						DevelopmentTeam = YWN725QK7F;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -428,14 +499,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1B322F2F5B809413C5A36A68 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9E6B7FAAE96EAA962196EDF0 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8314A69D1B52464000C527B2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				830A4C3E1B6C8D8700A9EDE4 /* BaseFetcher.swift in Sources */,
+				83ED833F1B57E4A900111CB7 /* DisConnectFetcher.swift in Sources */,
 				8314A6A71B52464000C527B2 /* AppDelegate.swift in Sources */,
+				8342F1F71B53E581000B8748 /* Chat.swift in Sources */,
 				8314A6F51B5246EA00C527B2 /* SettingViewController.swift in Sources */,
+				833C82FD1B569E950083E069 /* ConnectionFetcher.swift in Sources */,
 				83856E221B52A8AE00D17716 /* ChangeViewController.swift in Sources */,
+				8342F1F51B53D8D0000B8748 /* SendMessageFetcher.swift in Sources */,
+				83D3B58D1B5561EA00F16CE7 /* RegistFetcher.swift in Sources */,
+				83ED83411B57FE9A00111CB7 /* DetailFriendFetcher.swift in Sources */,
+				830A4C461B6CA75600A9EDE4 /* ChatViewController.swift in Sources */,
 				8314A6FE1B52485600C527B2 /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -452,9 +564,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83BDD4051B58151C00422B0D /* DetailFriendFetcher.swift in Sources */,
+				8342F1FB1B54012E000B8748 /* RowController.swift in Sources */,
 				8314A6D21B52468600C527B2 /* NotificationController.swift in Sources */,
+				830A4C471B6CB19300A9EDE4 /* SendMessageFetcher.swift in Sources */,
+				830A4C3F1B6C925700A9EDE4 /* BaseFetcher.swift in Sources */,
+				8342F1FE1B5411FD000B8748 /* WatchUtil.swift in Sources */,
+				8342F1F81B540011000B8748 /* Chat.swift in Sources */,
 				8314A6D01B52468600C527B2 /* InterfaceController.swift in Sources */,
 				8314A6D41B52468600C527B2 /* GlanceController.swift in Sources */,
+				8342F1F91B54001E000B8748 /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,29 +682,31 @@
 		};
 		8314A6C11B52464000C527B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B35D85CA5F7B3700FB685C0 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_ENTITLEMENTS = WatchChat/WatchChat.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = WatchChat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT)/WatchChat-Bridging-Header.h";
 			};
 			name = Debug;
 		};
 		8314A6C21B52464000C527B2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BACA05FA6E47B6C5811FAD63 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_ENTITLEMENTS = WatchChat/WatchChat.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				INFOPLIST_FILE = WatchChat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT)/WatchChat-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -660,7 +781,6 @@
 		8314A6EC1B52468600C527B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "WatchChat WatchKit Extension/WatchChat WatchKit Extension.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -679,7 +799,6 @@
 		8314A6ED1B52468600C527B2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "WatchChat WatchKit Extension/WatchChat WatchKit Extension.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "WatchChat WatchKit Extension/Info.plist";

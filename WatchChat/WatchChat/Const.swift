@@ -13,7 +13,7 @@ class Const {
     class var appGroupId: String {
         return "group.co.tatsuya.watchChat"
     }
-//    class var constInt: Int {
-//        return 1
-//    }
+    class var urlDomain: String {
+        return "http://104.155.198.181/api/v1"
+    }
 }

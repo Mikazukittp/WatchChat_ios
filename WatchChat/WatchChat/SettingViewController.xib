@@ -15,20 +15,11 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="userName" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rZj-Yu-HKh">
-                    <rect key="frame" x="0.0" y="100" width="600" height="30"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="30" id="xnp-CP-bVe"/>
-                    </constraints>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HWP-YE-EOS">
-                    <rect key="frame" x="225" y="200" width="150" height="30"/>
+                    <rect key="frame" x="210" y="200" width="180" height="30"/>
                     <color key="backgroundColor" red="0.25098039215686274" green="0.77254901960784317" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="150" id="9al-io-S73"/>
+                        <constraint firstAttribute="width" constant="180" id="9al-io-S73"/>
                     </constraints>
                     <state key="normal" title="設定">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -38,6 +29,15 @@
                         <action selector="settingButtonTapped:" destination="-1" eventType="touchUpInside" id="WjX-ps-gPI"/>
                     </connections>
                 </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="名前を入力してください" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rZj-Yu-HKh">
+                    <rect key="frame" x="0.0" y="100" width="600" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="xnp-CP-bVe"/>
+                    </constraints>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="7701"/>
@@ -15,23 +15,40 @@
                                 <action selector="inputTapped" destination="AgC-eL-Hgc" id="Kms-PJ-bjC"/>
                             </connections>
                         </button>
-                        <group width="80" alignment="left" id="MTW-6i-RyW">
+                        <table alignment="left" id="Tyw-yx-Hsy">
                             <items>
-                                <label alignment="left" text="Label" numberOfLines="0" id="BGc-iL-Xjs"/>
+                                <tableRow identifier="Cell" id="dhh-8C-dh7" customClass="RowController" customModule="WatchChat_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" id="hr3-uP-Wq4">
+                                        <items>
+                                            <group width="80" alignment="left" radius="5" id="Ciq-Fu-0gp">
+                                                <items>
+                                                    <label width="70" alignment="left" text="Label" numberOfLines="0" id="BGc-iL-Xjs"/>
+                                                </items>
+                                                <color key="backgroundColor" red="0.25098039220000001" green="0.7725490196" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
+                                            </group>
+                                            <group width="80" alignment="right" radius="5" id="hp5-RQ-1OS">
+                                                <items>
+                                                    <label width="70" alignment="right" text="Label" textAlignment="justified" numberOfLines="0" id="wbG-iX-Tqx"/>
+                                                </items>
+                                                <color key="backgroundColor" red="0.0" green="0.67615062879999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
+                                            </group>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="friendMessage" destination="Ciq-Fu-0gp" id="YkK-Qc-5dn"/>
+                                        <outlet property="friendText" destination="BGc-iL-Xjs" id="Zdr-a6-75h"/>
+                                        <outlet property="group" destination="hr3-uP-Wq4" id="Aer-8E-BYH"/>
+                                        <outlet property="myMessage" destination="hp5-RQ-1OS" id="i2s-Ig-0fC"/>
+                                        <outlet property="myText" destination="wbG-iX-Tqx" id="A0W-l8-EQC"/>
+                                    </connections>
+                                </tableRow>
                             </items>
-                            <color key="backgroundColor" red="0.25098039215686274" green="0.77254901960784317" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
-                        </group>
-                        <group width="80" alignment="right" id="fY8-Za-DiS">
-                            <items>
-                                <label alignment="left" text="Label" numberOfLines="0" id="R8i-a3-6wE"/>
-                            </items>
-                            <color key="backgroundColor" red="0.0" green="0.67615062881399079" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
-                        </group>
+                        </table>
                     </items>
                     <connections>
-                        <outlet property="myText" destination="R8i-a3-6wE" id="EJ2-ab-uWr"/>
+                        <outlet property="table" destination="Tyw-yx-Hsy" id="bh4-e7-4Aj"/>
                     </connections>
                 </controller>
             </objects>
@@ -68,7 +85,7 @@
                     <items>
                         <label alignment="left" text="Alert Label" id="XkS-y5-khE"/>
                     </items>
-                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <notificationCategory key="notificationCategory" identifier="remotePush" id="JfB-70-Muf"/>
                     <connections>
                         <outlet property="notificationAlertLabel" destination="XkS-y5-khE" id="49B-RR-99y"/>
                         <segue destination="gdX-wl-uQE" kind="relationship" relationship="dynamicNotificationInterface" id="fKh-qV-3T2"/>

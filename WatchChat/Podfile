@@ -1,0 +1,3 @@
+pod 'Google/CloudMessaging'
+pod 'Realm'
+pod 'JSQMessagesViewController'
