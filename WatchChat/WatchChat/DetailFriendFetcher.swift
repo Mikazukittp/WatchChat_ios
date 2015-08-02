@@ -34,9 +34,7 @@ class DetailFriendFetcher: BaseFetcher {
                     def?.setObject(userId, forKey: "userId")
                     def?.setObject(userName, forKey: "userName")
                 }
-            }
-
-            
+            }            
         }
     }
 

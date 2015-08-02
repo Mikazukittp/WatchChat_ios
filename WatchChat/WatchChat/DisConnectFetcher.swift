@@ -14,16 +14,11 @@ class DisConnectFetcher: BaseFetcher {
         let def = NSUserDefaults(suiteName: Const.appGroupId)
         var myid = def?.objectForKey("myId") as? Int
         
-        var request = NSMutableURLRequest(URL: NSURL(string: Const.urlDomain + "/connections")!,
+        var request = NSMutableURLRequest(URL: NSURL(string: Const.urlDomain + "/connections/" + String(myid!))!,
             cachePolicy: .UseProtocolCachePolicy,
             timeoutInterval: 10.0)
         request.HTTPMethod = "DELETE"
         println(Const.urlDomain + "/connections")
-        
-        var postString:String = "id=" + String(myid!)
-        
-        request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
-        
         
         self.sendAsynchronousByUrl(request) { (items) -> Void in
             

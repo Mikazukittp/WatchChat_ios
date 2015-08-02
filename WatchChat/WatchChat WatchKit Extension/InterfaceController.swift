@@ -24,11 +24,9 @@ class InterfaceController: WKInterfaceController {
         super.awakeWithContext(context)
         
         let def = NSUserDefaults(suiteName: Const.appGroupId)
-        myName = "tatsuya"
-            //def?.objectForKey("myName") as! String
-        myId = 43
-            //= def?.objectForKey("myId") as? Int!
-        opponentId = 46
+        myName = def?.objectForKey("myName") as! String
+        myId = def?.objectForKey("myId") as? Int!
+        opponentId = def?.objectForKey("userId") as? Int!
     }
 
     override func willActivate() {

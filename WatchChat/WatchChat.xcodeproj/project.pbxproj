@@ -39,6 +39,7 @@
 		83D3B58D1B5561EA00F16CE7 /* RegistFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D3B58C1B5561EA00F16CE7 /* RegistFetcher.swift */; };
 		83ED833F1B57E4A900111CB7 /* DisConnectFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ED833E1B57E4A900111CB7 /* DisConnectFetcher.swift */; };
 		83ED83411B57FE9A00111CB7 /* DetailFriendFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ED83401B57FE9A00111CB7 /* DetailFriendFetcher.swift */; };
+		83EDAA751B6E1CF4006A6931 /* WatchUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8342F1FD1B5411FD000B8748 /* WatchUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -543,6 +544,7 @@
 				8342F1F71B53E581000B8748 /* Chat.swift in Sources */,
 				8314A6F51B5246EA00C527B2 /* SettingViewController.swift in Sources */,
 				833C82FD1B569E950083E069 /* ConnectionFetcher.swift in Sources */,
+				83EDAA751B6E1CF4006A6931 /* WatchUtil.swift in Sources */,
 				83856E221B52A8AE00D17716 /* ChangeViewController.swift in Sources */,
 				8342F1F51B53D8D0000B8748 /* SendMessageFetcher.swift in Sources */,
 				83D3B58D1B5561EA00F16CE7 /* RegistFetcher.swift in Sources */,

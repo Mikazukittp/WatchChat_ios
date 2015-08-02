@@ -47,7 +47,7 @@ class SettingViewController: UIViewController,UITextFieldDelegate {
             self.userId = userId
             
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                var pc = ChangeViewController(nibName: "ChangeViewController", bundle: nil)
+                var pc = ChatViewController()
                 self.navigationController?.pushViewController(pc, animated: true)
                 self.navigationController?.setNavigationBarHidden(false, animated: true)
             })

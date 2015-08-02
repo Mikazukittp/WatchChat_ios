@@ -10,26 +10,35 @@ import UIKit
 
 class ChatViewController: JSQMessagesViewController {
 
-    var userName = ""
+    var myName = ""
+    var myId = 0
+    var opponentId = 0
+    var opponentUserName = ""
+    
     var messages = [JSQMessage]()
-    let incomingBubble = JSQMessagesBubbleImageFactory().incomingMessagesBubbleImageWithColor(UIColor(red: 10/255, green: 180/255, blue: 230/255, alpha: 1.0))
-    let outgoingBubble = JSQMessagesBubbleImageFactory().outgoingMessagesBubbleImageWithColor(UIColor.lightGrayColor())
+    let incomingBubble = JSQMessagesBubbleImageFactory().incomingMessagesBubbleImageWithColor(UIColor(red: 0.251, green: 0.773, blue: 0.0, alpha: 1.0))
+        
+    let outgoingBubble = JSQMessagesBubbleImageFactory().outgoingMessagesBubbleImageWithColor(UIColor(red: 0.0, green: 0.676, blue: 1.0, alpha: 1.0))
+    
+    let incomingAvatar = JSQMessagesAvatarImageFactory.avatarImageWithImage(UIImage(named: "myUser"), diameter: 64)
+    let outgoingAvatar = JSQMessagesAvatarImageFactory.avatarImageWithImage(UIImage(named: "opponentUser"), diameter: 64)
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        self.userName = "iPhone"
+
+        let def = NSUserDefaults(suiteName: Const.appGroupId)
+        self.myName = def?.objectForKey("myName") as! String
+        self.myId = (def?.objectForKey("myId") as? Int!)!
+        self.opponentId = (def?.objectForKey("userId") as? Int!)!
+        self.opponentUserName = def?.objectForKey("userName") as! String
         
-        for i in 1...10 {
-            var sender = (i%2 == 0) ? "Syncano" : self.userName
-            var message = JSQMessage(senderId: sender, displayName: sender, text: "Text")
-            self.messages += [message]
-        }
-        self.collectionView.reloadData()
-        self.senderDisplayName = self.userName
-        self.senderId = self.userName
+        self.inputToolbar.contentView.leftBarButtonItem = nil
+        self.senderDisplayName = self.myName
+        self.senderId = String(self.opponentId)
         
-        self.title = ""
+        self.title = self.opponentUserName + "さんとの会話"
+        self.setCustomButton()
+        self.loadData()
     }
     
     override func collectionView(collectionView: JSQMessagesCollectionView!, messageDataForItemAtIndexPath indexPath: NSIndexPath!) -> JSQMessageData! {
@@ -47,7 +56,14 @@ class ChatViewController: JSQMessagesViewController {
     }
     
     override func collectionView(collectionView: JSQMessagesCollectionView!, avatarImageDataForItemAtIndexPath indexPath: NSIndexPath!) -> JSQMessageAvatarImageDataSource! {
-        return nil
+        var data = self.messages[indexPath.row]
+
+        if (data.senderId == self.senderId) {
+            return self.outgoingAvatar
+        } else {
+            return self.incomingAvatar
+        }
+
     }
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -63,4 +79,35 @@ class ChatViewController: JSQMessagesViewController {
     override func didPressAccessoryButton(sender: UIButton!) {
     }
     
+    private func loadData () {
+        
+        WatchUtil().chats({ (items) -> Void in
+            
+            for item in items {
+                var message = JSQMessage(senderId: String(item.userId), displayName: item.name, text: item.message)
+                self.messages += [message]
+ 
+            }
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                self.collectionView.reloadData()
+
+            })
+        })
+    }
+    
+    private func setCustomButton (){
+        
+        var customButton :UIButton = UIButton(frame: CGRectMake(0, 0, 20, 20))
+        customButton.setBackgroundImage(UIImage(named: "Setting"), forState: UIControlState.Normal)
+        customButton.addTarget(self, action:  Selector("settingButtonTapped"), forControlEvents: .TouchUpInside)
+        var customButtonItem :UIBarButtonItem = UIBarButtonItem(customView: customButton)
+        self.navigationItem.rightBarButtonItem = customButtonItem
+        
+    }
+    
+    func settingButtonTapped () {
+        var pc = ChangeViewController(nibName: "ChangeViewController", bundle: nil)
+        self.navigationController?.pushViewController(pc, animated: true)
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
 }
