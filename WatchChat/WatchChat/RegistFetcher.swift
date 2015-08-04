@@ -20,7 +20,7 @@ class RegistFetcher: BaseFetcher {
             timeoutInterval: 10.0)
         request.HTTPMethod = "POST"
         
-        var postString:String = "gcm_id=\(deviceToken)&name=\(name)&device_type=ios"
+        var postString:String = "gcm_id=\(deviceToken!)&name=\(name)&device_type=ios"
         request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
         
         
