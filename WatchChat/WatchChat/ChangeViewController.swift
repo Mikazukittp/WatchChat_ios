@@ -21,6 +21,7 @@ class ChangeViewController: UIViewController {
         //Naviagationbar潜り込み防止
         self.edgesForExtendedLayout = UIRectEdge.None
         
+        
         let def = NSUserDefaults(suiteName: Const.appGroupId)
         var myName = def?.objectForKey("myName") as? String
 

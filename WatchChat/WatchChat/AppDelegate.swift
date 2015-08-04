@@ -70,7 +70,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let def = NSUserDefaults(suiteName: Const.appGroupId)
         var myId = def?.objectForKey("deviceToken") as? Int
-        def?.setObject("9ff133a577a977a0b6feae1d127329baa1fc48c36dd97831b5c2158c74e5e699", forKey: "deviceToken")
+        def?.setObject(deviceTokenString, forKey: "deviceToken")
     
         println( deviceTokenString )
         

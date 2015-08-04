@@ -25,6 +25,8 @@ class ChatViewController: JSQMessagesViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.hidesBackButton = true
 
         let def = NSUserDefaults(suiteName: Const.appGroupId)
         self.myName = def?.objectForKey("myName") as! String

@@ -21,7 +21,7 @@ class SettingViewController: UIViewController,UITextFieldDelegate {
         self.title = "WatchChat"
         
         self.indicatorView.hidden = true
-        
+                
         self.setButton()
         userName.delegate = self
 }
