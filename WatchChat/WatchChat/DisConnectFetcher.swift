@@ -13,6 +13,7 @@ class DisConnectFetcher: BaseFetcher {
     func deleteUser (completion:()->Void) {
         let def = NSUserDefaults(suiteName: Const.appGroupId)
         var myid = def?.objectForKey("myId") as? Int
+
         
         var request = NSMutableURLRequest(URL: NSURL(string: Const.urlDomain + "/connections/" + String(myid!))!,
             cachePolicy: .UseProtocolCachePolicy,
