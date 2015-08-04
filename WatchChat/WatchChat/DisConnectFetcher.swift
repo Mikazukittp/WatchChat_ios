@@ -24,16 +24,12 @@ class DisConnectFetcher: BaseFetcher {
             
             let dict = items as? NSDictionary
             println(dict)
-
-//            if let userId = json.objectForKey("id") as? String {
-//                if let userName = json.objectForKey("name") as? String{
-//                    def?.setObject(userId, forKey: "userId")
-//                    def?.setObject(userName, forKey: "userName")
-//                    completion(userName: userName, userId: userId)
-//                }
-//            }
             
-            completion()
+            if let error = dict!.objectForKey("error") as? String {
+                println(error)
+            } else {
+                completion()
+            }
         }
 
     }

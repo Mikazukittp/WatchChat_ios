@@ -11,6 +11,7 @@ import UIKit
 class SettingViewController: UIViewController,UITextFieldDelegate {
 
     @IBOutlet weak var userName: UITextField!
+    @IBOutlet weak var indicatorView: UIActivityIndicatorView!
     
     var userId :Int!
     
@@ -18,6 +19,8 @@ class SettingViewController: UIViewController,UITextFieldDelegate {
         super.viewDidLoad()
 
         self.title = "WatchChat"
+        
+        self.indicatorView.hidden = true
         
         self.setButton()
         userName.delegate = self
@@ -39,13 +42,18 @@ class SettingViewController: UIViewController,UITextFieldDelegate {
         }
         
         var fetcher = RegistFetcher()
+        
+        self.indicatorView.hidden = false
+        self.indicatorView.startAnimating()
         fetcher.regist(self.userName.text, completion:{(userId :Int) in
 
             let def = NSUserDefaults(suiteName: Const.appGroupId)
             def?.setObject(self.userName.text, forKey: "myName")
 
             self.userId = userId
-            
+            self.indicatorView.stopAnimating()
+            self.indicatorView.hidden = true
+
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 var pc = ChatViewController()
                 self.navigationController?.pushViewController(pc, animated: true)

@@ -35,12 +35,12 @@ class ChangeViewController: UIViewController {
         if let matchUser = def?.objectForKey("userName") as? String {
             self.matchUserName.text = matchUser
             self.matchUserName.sizeToFit();
-            self.fetchButton.setTitle("友達をやめる", forState: UIControlState.Normal);
+            self.fetchButton.setTitle("友達をやめる", forState: UIControlState.Normal)
             self.fetchButton.titleLabel?.sizeToFit()
         }else {
             self.matchUserName.text = "-"
             self.matchUserName.sizeToFit();
-            self.fetchButton.setTitle("友達を探す", forState: UIControlState.Normal);
+            self.fetchButton.setTitle("友達を探す", forState: UIControlState.Normal)
             self.fetchButton.titleLabel?.sizeToFit()
         }
         
@@ -56,7 +56,7 @@ class ChangeViewController: UIViewController {
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     self.userId = userId
                     self.matchUserName.text = userName
-                    self.fetchButton.titleLabel?.text = "友達をやめる"
+                    self.fetchButton.setTitle("友達をやめる", forState: UIControlState.Normal)
                     self.fetchButton.titleLabel?.sizeToFit()
                 })
             })
@@ -72,7 +72,7 @@ class ChangeViewController: UIViewController {
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     self.userId = nil
                     self.matchUserName.text = "-"
-                    self.fetchButton.titleLabel?.text = "友達を探す"
+                    self.fetchButton.setTitle("友達を探す", forState: UIControlState.Normal)
                     })
             })
         }

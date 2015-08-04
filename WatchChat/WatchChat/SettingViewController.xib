@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingViewController" customModule="WatchChat" customModuleProvider="target">
             <connections>
+                <outlet property="indicatorView" destination="tyz-Sg-WAZ" id="4Dc-Ke-mCO"/>
                 <outlet property="userName" destination="rZj-Yu-HKh" id="8xw-Fr-mqp"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -38,12 +39,17 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="tyz-Sg-WAZ">
+                    <rect key="frame" x="290" y="290" width="20" height="20"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="centerY" secondItem="tyz-Sg-WAZ" secondAttribute="centerY" id="02X-fg-7hq"/>
                 <constraint firstItem="rZj-Yu-HKh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="EdN-Uq-dbI"/>
                 <constraint firstItem="rZj-Yu-HKh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="IUV-lj-Vdp"/>
                 <constraint firstItem="HWP-YE-EOS" firstAttribute="top" secondItem="rZj-Yu-HKh" secondAttribute="bottom" constant="70" id="ML8-ga-LcS"/>
+                <constraint firstAttribute="centerX" secondItem="tyz-Sg-WAZ" secondAttribute="centerX" id="Nz4-gC-Jfd"/>
                 <constraint firstAttribute="trailing" secondItem="rZj-Yu-HKh" secondAttribute="trailing" id="ORN-lC-mrJ"/>
                 <constraint firstAttribute="centerX" secondItem="HWP-YE-EOS" secondAttribute="centerX" id="YYU-x3-Z8w"/>
             </constraints>

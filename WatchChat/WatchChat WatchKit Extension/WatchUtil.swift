@@ -41,13 +41,14 @@ class WatchUtil: NSObject {
     }
     
     
-    func addItem (item :Chat , items :Array<Chat>) {
+    func addItem (item :Chat, completion:()->Void) {
         
         var fetcher = SendMessageFetcher()
         
         fetcher.sendMessage(item.message, completion: {(item) -> Void in
             println("sucucess")
             println(item)
+            completion()
         })
     }
     

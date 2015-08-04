@@ -53,8 +53,11 @@ class InterfaceController: WKInterfaceController {
                 item.message = result[0] as? String
                 item.userId = self.opponentId
 
-                WatchUtil().addItem(item ,items :self.items)
-                self.addItems(item)
+                WatchUtil().addItem(item, completion: { () -> Void in
+                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                        self.addItems(item)
+                    })
+                })
             }
         })
     }

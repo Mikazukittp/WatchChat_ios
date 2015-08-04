@@ -12,8 +12,8 @@ class ChatViewController: JSQMessagesViewController {
 
     var myName = ""
     var myId = 0
-    var opponentId = 0
-    var opponentUserName = ""
+    var opponentId :Int?
+    var opponentUserName :String?
     
     var messages = [JSQMessage]()
     let incomingBubble = JSQMessagesBubbleImageFactory().incomingMessagesBubbleImageWithColor(UIColor(red: 0.251, green: 0.773, blue: 0.0, alpha: 1.0))
@@ -29,16 +29,25 @@ class ChatViewController: JSQMessagesViewController {
         let def = NSUserDefaults(suiteName: Const.appGroupId)
         self.myName = def?.objectForKey("myName") as! String
         self.myId = (def?.objectForKey("myId") as? Int!)!
-        self.opponentId = (def?.objectForKey("userId") as? Int!)!
-        self.opponentUserName = def?.objectForKey("userName") as! String
         
         self.inputToolbar.contentView.leftBarButtonItem = nil
         self.senderDisplayName = self.myName
-        self.senderId = String(self.opponentId)
         
-        self.title = self.opponentUserName + "さんとの会話"
         self.setCustomButton()
-        self.loadData()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        let def = NSUserDefaults(suiteName: Const.appGroupId)
+        self.opponentId = def?.objectForKey("userId") as? Int
+        self.opponentUserName = def?.objectForKey("userName") as? String
+        
+        if (self.opponentId != nil && self.opponentUserName != nil) {
+            self.senderId = String(self.opponentId!)
+            
+            self.title = self.opponentUserName! + "さんとの会話"
+            self.messages.removeAll()
+            self.loadData()
+        }
     }
     
     override func collectionView(collectionView: JSQMessagesCollectionView!, messageDataForItemAtIndexPath indexPath: NSIndexPath!) -> JSQMessageData! {
@@ -71,16 +80,27 @@ class ChatViewController: JSQMessagesViewController {
     }
     
     override func didPressSendButton(button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: NSDate!) {
+        
         var newMessage = JSQMessage(senderId: senderId, displayName: senderDisplayName, text: text);
-        messages += [newMessage]
-        self.finishSendingMessage()
+        
+        var item:Chat = Chat()
+        item.name = self.myName
+        item.message = text
+        item.userId = self.opponentId
+       
+        WatchUtil().addItem(item, completion: { () -> Void in
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                self.messages += [newMessage]
+                self.finishSendingMessage()
+            })
+        })
     }
     
     override func didPressAccessoryButton(sender: UIButton!) {
     }
     
     private func loadData () {
-        
+                
         WatchUtil().chats({ (items) -> Void in
             
             for item in items {
