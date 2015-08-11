@@ -28,6 +28,7 @@ class DisConnectFetcher: BaseFetcher {
             
             if let error = dict!.objectForKey("error") as? String {
                 println(error)
+                completion()
             } else {
                 completion()
             }

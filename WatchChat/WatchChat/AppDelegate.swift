@@ -77,7 +77,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
-        
+        if let win = window {
+            
+            if let aps = userInfo["aps"] as? NSDictionary {
+                if let alert = aps["alert"] as? NSDictionary {
+                    if let message = alert["message"] as? NSString {
+                        //Do stuff
+                    }
+                } else if let alert = aps["alert"] as? NSString {
+                    
+                    if let nc = win.rootViewController as? UINavigationController {
+                        if var vc = nc.topViewController as? ChatViewController {
+                            vc.receivedRemoteNotification(alert as String)
+                        }
+                    }
+                }
+            }
+        }
     }
     
     

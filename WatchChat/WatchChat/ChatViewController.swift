@@ -49,6 +49,8 @@ class ChatViewController: JSQMessagesViewController {
             self.title = self.opponentUserName! + "さんとの会話"
             self.messages.removeAll()
             self.loadData()
+        }else {
+            settingButtonTapped()
         }
     }
     
@@ -98,7 +100,13 @@ class ChatViewController: JSQMessagesViewController {
         })
     }
     
-    override func didPressAccessoryButton(sender: UIButton!) {
+    func receivedRemoteNotification (message: String) {
+        if self.myId == 0 {
+            return
+        }
+        var newMessage = JSQMessage(senderId: String(self.myId), displayName: self.myName, text: message)
+        self.messages += [newMessage]
+        self.finishSendingMessage()
     }
     
     private func loadData () {

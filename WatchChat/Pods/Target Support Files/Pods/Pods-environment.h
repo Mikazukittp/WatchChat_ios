@@ -78,3 +78,9 @@
 #define COCOAPODS_VERSION_MINOR_Realm_Headers 94
 #define COCOAPODS_VERSION_PATCH_Realm_Headers 0
 
+// UITextFieldWithLimit
+#define COCOAPODS_POD_AVAILABLE_UITextFieldWithLimit
+#define COCOAPODS_VERSION_MAJOR_UITextFieldWithLimit 0
+#define COCOAPODS_VERSION_MINOR_UITextFieldWithLimit 1
+#define COCOAPODS_VERSION_PATCH_UITextFieldWithLimit 1
+

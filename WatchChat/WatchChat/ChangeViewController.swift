@@ -33,6 +33,21 @@ class ChangeViewController: UIViewController {
         let def = NSUserDefaults(suiteName: Const.appGroupId)
         self.userId = def?.objectForKey("userId") as? Int
         
+        if (self.userId == nil) {
+            let fetcher =  DetailFriendFetcher()
+            fetcher.myFriendWithCompletion({ () -> Void in
+                self.setUserName()
+            })
+        }else {
+            self.setUserName()
+        }
+    }
+    
+    private func setUserName () {
+       
+        
+        let def = NSUserDefaults(suiteName: Const.appGroupId)
+
         if let matchUser = def?.objectForKey("userName") as? String {
             self.matchUserName.text = matchUser
             self.matchUserName.sizeToFit();
@@ -44,7 +59,7 @@ class ChangeViewController: UIViewController {
             self.fetchButton.setTitle("友達を探す", forState: UIControlState.Normal)
             self.fetchButton.titleLabel?.sizeToFit()
         }
-        
+
     }
 
     @IBAction func connnectButtonTapped(sender: AnyObject) {

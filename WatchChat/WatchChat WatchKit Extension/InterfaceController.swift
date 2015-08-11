@@ -14,24 +14,35 @@ class InterfaceController: WKInterfaceController {
 
     @IBOutlet weak var myText: WKInterfaceLabel!
     @IBOutlet weak var table: WKInterfaceTable!
+    @IBOutlet weak var settingArert: WKInterfaceGroup!
+    @IBOutlet weak var voiceInput: WKInterfaceButton!
     
     var items: [Chat] = []
-    var myName: String = ""
-    var myId :Int!
-    var opponentId :Int!
+    var myName: String?
+    var myId :Int?
+    var opponentId :Int?
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
-        
-        let def = NSUserDefaults(suiteName: Const.appGroupId)
-        myName = def?.objectForKey("myName") as! String
-        myId = def?.objectForKey("myId") as? Int!
-        opponentId = def?.objectForKey("userId") as? Int!
     }
 
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        
+        let def = NSUserDefaults(suiteName: Const.appGroupId)
+        myName = def?.objectForKey("myName") as? String
+        myId = def?.objectForKey("myId") as? Int
+        opponentId = def?.objectForKey("userId") as? Int
+        
+        if (myId == nil || opponentId == nil) {
+            voiceInput.setHidden(true)
+            settingArert.setHidden(false)
+        }else {
+            voiceInput.setHidden(false)
+            settingArert.setHidden(true)
+        }
+
         
         self.loadData()
     }
@@ -78,7 +89,7 @@ class InterfaceController: WKInterfaceController {
         for anItem in self.items {
             let row = self.table.rowControllerAtIndex(i) as! RowController
             row.group.setBackgroundColor(UIColor.clearColor())
-            row.showItem(self.myId, item: anItem)
+            row.showItem(self.myId!, item: anItem)
             i++
         }
     }

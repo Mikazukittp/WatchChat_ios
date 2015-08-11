@@ -46,9 +46,16 @@
                                 </tableRow>
                             </items>
                         </table>
+                        <group width="1" alignment="left" hidden="YES" id="9Da-Vq-IvG">
+                            <items>
+                                <label alignment="left" text="iPhoneにてユーザ登録もしくは友達設定を行ってください" numberOfLines="4" id="Icn-t5-fqZ"/>
+                            </items>
+                        </group>
                     </items>
                     <connections>
+                        <outlet property="settingArert" destination="9Da-Vq-IvG" id="C6P-Tp-PPM"/>
                         <outlet property="table" destination="Tyw-yx-Hsy" id="bh4-e7-4Aj"/>
+                        <outlet property="voiceInput" destination="xKw-D9-vhe" id="Rbx-sU-XAV"/>
                     </connections>
                 </controller>
             </objects>

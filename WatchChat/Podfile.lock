@@ -29,11 +29,13 @@ PODS:
   - Realm (0.94.0):
     - Realm/Headers (= 0.94.0)
   - Realm/Headers (0.94.0)
+  - UITextFieldWithLimit (0.1.1)
 
 DEPENDENCIES:
   - Google/CloudMessaging
   - JSQMessagesViewController
   - Realm
+  - UITextFieldWithLimit
 
 SPEC CHECKSUMS:
   GGLInstanceID: 3f2a20acbb91408d45a5696b7722bf44cb410e0b
@@ -46,5 +48,6 @@ SPEC CHECKSUMS:
   JSQMessagesViewController: ca11f86fa68ca70835f05e169df9244147c1dc40
   JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
   Realm: a046149653e0ca220b65b5783da907aa5b74d86c
+  UITextFieldWithLimit: 7b292ab1fe30fb03fa2f9b595be2c414f93cdb6d
 
 COCOAPODS: 0.37.2

@@ -23,8 +23,10 @@ class SettingViewController: UIViewController,UITextFieldDelegate {
         self.indicatorView.hidden = true
                 
         self.setButton()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:"textFieldDidChange:", name: UITextFieldTextDidChangeNotification, object: nil)
+
         userName.delegate = self
-}
+    }
 
     @IBAction func settingButtonTapped(sender: AnyObject) {
         
@@ -39,6 +41,10 @@ class SettingViewController: UIViewController,UITextFieldDelegate {
             self.navigationController?.pushViewController(pc, animated: true)
             self.navigationController?.setNavigationBarHidden(false, animated: true)
             return
+        }
+        
+        if userName.markedTextRange != nil {
+            return;
         }
         
         var fetcher = RegistFetcher()
@@ -69,23 +75,20 @@ class SettingViewController: UIViewController,UITextFieldDelegate {
         userName.layer.addSublayer(bottomBorder)
     }
     
-    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+    func textFieldDidChange(notification:NSNotification){
         
-        // 文字数最大を決める.
-        let maxLength: Int = 11
+        //ここで文字数を取得して、いい感じに処理します。
+        let length = count(userName.text.utf16)
         
-        // 入力済みの文字と入力された文字を合わせて取得.
-        var str = textField.text + string
-        
-        // 文字数がmaxLength以下ならtrueを返す.
-        if count("\(str)") < maxLength {
-            return true
-        }
-        userName.text = ""
-        userName.attributedPlaceholder = NSAttributedString(string:"10文字を超えています。",
-            attributes:[NSForegroundColorAttributeName: UIColor.redColor()])
-        println("10文字を超えています")
-        return false
-    }
+        let maxLength: Int = 8
 
+        if (length > maxLength) {
+            userName.text = ""
+            userName.attributedPlaceholder = NSAttributedString(string:"10文字を超えています。",
+                attributes:[NSForegroundColorAttributeName: UIColor.redColor()])
+            println("8文字を超えています")
+            
+            return;
+        }
+    }
 }

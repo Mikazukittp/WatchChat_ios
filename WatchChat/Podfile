@@ -1,3 +1,4 @@
 pod 'Google/CloudMessaging'
 pod 'Realm'
 pod 'JSQMessagesViewController'
+pod 'UITextFieldWithLimit'
